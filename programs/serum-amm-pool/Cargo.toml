@@ -1,0 +1,22 @@
+[package]
+name = "serum-amm-pool"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "serum_amm_pool"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.28.0"
+anchor-spl = "0.28.0"
+serum_dex = { git = "https://github.com/project-serum/serum-dex", rev = "master", features = ["no-entrypoint"] }
+solana-program = "1.16"
